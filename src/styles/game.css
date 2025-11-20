@@ -1,0 +1,30 @@
+#hero {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - var(--space-sm));
+    text-align: left;
+    padding: var(--padding-sm);
+    z-index: 0;
+    color: var(--color-05);
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px 20px 0px 0px;
+    background: url("https://plus.unsplash.com/premium_photo-1673543763969-1d54002352d0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+#gameTools {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-01);
+    color: var(--color-04);
+    padding: var(--padding-sm) 0;
+}
