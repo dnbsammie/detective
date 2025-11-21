@@ -1,3 +1,5 @@
+import { navigateTo } from "../main";
+
 export function Rules() {
   const section = document.createElement("section");
   section.id = "rules";
@@ -58,7 +60,7 @@ export function Rules() {
   `;
 
   section.querySelector("#startGame")?.addEventListener("click", () => {
-    window.location.href = "/game.html";
+    navigateTo("game");
   });
 
 

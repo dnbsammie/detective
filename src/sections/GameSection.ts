@@ -1,4 +1,6 @@
-import { nextLevel, prevLevel, levelIndex, levelData } from "../core/levels";
+// nextLevel, prevLevel,
+import { levelIndex, levelData } from "../core/levels";
+import { pauseBackgroundMusic } from "../components/BackgroundMusic";
 import { navigateTo } from "../utils/router";
 
 export function GameSection() {
@@ -10,8 +12,9 @@ export function GameSection() {
       <h5>Parte ${levelIndex() + 1}: ${levelData[levelIndex()].title}</h5>
 
       <nav class="level-nav" aria-label="Navegación de niveles">
-        <a href="#" id="prevLevel">Anterior</a>
-        <a href="#" id="nextLevel">Siguiente</a>
+      <!-- <a href="#" id="prevLevel">Anterior</a> -->
+      
+        <!--<a href="#" id="nextLevel">Siguiente</a>-->
         <a href="#" id="goHome">Inicio</a>
       </nav>
     </header>
@@ -34,20 +37,20 @@ export function GameSection() {
     </div>
   `;
 
-  section.querySelector("#prevLevel")?.addEventListener("click", (e) => {
-    e.preventDefault();
-    prevLevel();
-  });
+  // section.querySelector("#prevLevel")?.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   prevLevel();
+  // });
 
-  section.querySelector("#nextLevel")?.addEventListener("click", (e) => {
-    e.preventDefault();
-    nextLevel();
-  });
+  // section.querySelector("#nextLevel")?.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   nextLevel();
+  // });
 
   section.querySelector("#goHome")?.addEventListener("click", (e) => {
     e.preventDefault();
+    pauseBackgroundMusic();
     navigateTo("index.html");
   });
-
   return section;
 }
