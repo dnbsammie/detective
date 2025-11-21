@@ -58,7 +58,7 @@ export const levelData = [
             "D Franco: dijo no verla, pero mensajes citándola al lugar del crimen."
         ],
         suspects: ["A. Méndez", "M. Ríos", "D. Franco"],
-        question: "¿Cuál testimonio tiene la contradicción más grave? Selección multiple.",
+        question: "¿Cuál testimonio tiene la contradicción más grave?",
         options: [
             "A. A. Méndez",
             "B. M. Ríos",

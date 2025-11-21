@@ -73,7 +73,7 @@ export function renderGame(): HTMLElement {
                 if (current < levelCount - 1) {
                     goNextLevel();
                 } else {
-                    navigateTo("end.html");
+                    navigateTo("end");
                 }
             }, 600);
         });

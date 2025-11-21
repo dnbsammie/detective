@@ -45,7 +45,7 @@ function loadAnswers(): number[] {
 export function recordAnswer(selectedIndex: number) {
     if (!state.answers) state.answers = [];
     state.answers[state.currentLevel] = selectedIndex;
-    saveAnswers(); // 💡 GUARDAR después de cada respuesta
+    saveAnswers();
 }
 
 export function resetGame() {
