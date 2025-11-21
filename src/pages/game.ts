@@ -5,7 +5,6 @@ import { GamePanel } from "../components/UI/GamePanel";
 import { Inventory } from "../components/UI/Inventory";
 import { levelIndex, levelData, goNextLevel, levelCount } from "../core/levels";
 import { addLog, recordAnswer, state, addItem } from "../core/store";
-import { navigateTo } from "../main";
 import { GameSection } from "../sections/GameSection";
 
 export function renderGame(): HTMLElement {
@@ -73,7 +72,7 @@ export function renderGame(): HTMLElement {
                 if (current < levelCount - 1) {
                     goNextLevel();
                 } else {
-                    navigateTo("end");
+                    window.location.hash = 'end';
                 }
             }, 600);
         });
