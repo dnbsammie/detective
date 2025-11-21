@@ -1,5 +1,6 @@
 import { HomeLayout } from "../layouts/HomeLayout";
 import { Hero } from "../sections/HeroSection";
+import { History } from "../sections/HistorySection";
 import { Rules } from "../sections/RulesSection";
 
 export function renderHome(): HTMLElement {
@@ -8,6 +9,7 @@ export function renderHome(): HTMLElement {
     if (!container) throw new Error("Container no encontrado");
 
     container.appendChild(Hero());
+    container.appendChild(History());
     container.appendChild(Rules());
 
     return layout;

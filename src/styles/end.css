@@ -1,0 +1,64 @@
+#resultSection {
+    position: relative;
+    border-radius: 20px 20px 0px 0px;
+    background-color: var(--color-03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-02);
+    z-index: 0;
+}
+
+#resultSection::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px 20px 0px 0px;
+    background: url("../assets/img/img_2.webp") center/cover no-repeat;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.finalVerdict {
+    background-color: rgba(255, 26, 26, 0.75);
+    color: var(--color-01);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--color-01);
+    border-radius: 20px;
+    gap: var(--gap-md);
+    padding: var(--padding-md);
+    text-align: center;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.squares {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.square {
+    background-color: rgba(28, 28, 28, 0.75);
+    color: var(--color-04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--color-04);
+    border-radius: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-sm);
+}
+
+.square small {
+    font-family: 'Bebas Neue';
+    color: var(--color-05);
+}

@@ -14,10 +14,10 @@
 <!-- ABOUT THE PROJECT -->
 <h2 id="about-the-project">🎯 Sobre el Juego</h2>
 <p>El jugador debe: Analizar la escena del crimen. Revisar perfiles psicológicos. Interrogar sospechosos. Analizar evidencia forense. Reconstruir la línea del tiempo. Identificar al culpable y justificarlo</p>
-
-<p>Link: <a href="#"> click here.</a></p>
-
-
+<p>
+  <strong>Link:</strong> <a href="https://dnbsammie.github.io/detective/">https://dnbsammie.github.io/detective/</a><br>
+  <strong>Narrativa:</strong> <a href="./docs/story_script.md">./docs/story_script.md</a>
+</p>
 <h3 align="left">Lenguajes y herramientas:</h3>
 
 <p align="left">
@@ -28,7 +28,6 @@
 
 <p>
   <strong>Author:</strong> Samuel Rivera<br>
-  <strong>Link:</strong> <a href="https://dnbsammie.github.io/detective/">https://dnbsammie.github.io/detective/</a>
 </p>
 
 ---

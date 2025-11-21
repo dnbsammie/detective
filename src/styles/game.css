@@ -1,30 +1,199 @@
-#hero {
-    position: relative;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100vh - var(--space-sm));
-    text-align: left;
+header {
+    background: rgba(255, 255, 255, 0.0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 0;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 1px solid var(--color-01);
     padding: var(--padding-sm);
-    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue';
+    color: var(--color-04);
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    font-weight: 400;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-sm);
+}
+
+nav a {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+}
+
+nav a:hover {
     color: var(--color-05);
 }
 
-#hero::before {
+#gameContent {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 0;
+    gap: var(--gap-sm);
+}
+
+#gameContent::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 20px 20px 0px 0px;
-    background: url("https://plus.unsplash.com/premium_photo-1673543763969-1d54002352d0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+    background: url("../assets/img/img_1.webp") center/cover no-repeat;
     filter: grayscale(100%);
     z-index: -1;
 }
 
-#gameTools {
-    height: fit-content;
+.gameWindow {
+    flex: 1;
     display: flex;
+    flex-direction: row;
+    padding: var(--padding-sm);
+    gap: var(--gap-sm);
+}
+
+.game-l,
+.game-m,
+.game-r {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-01);
+    gap: var(--gap-sm);
+}
+
+.game-l,
+.game-r {
+    flex: 1;
+}
+
+.game-m {
+    flex: 2;
+}
+
+.notebook,
+.gamelog,
+.gamePanel,
+.inventory,
+.content {
+    border-radius: 20px;
+    background-color: rgba(25, 25, 25, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: var(--color-04);
-    padding: var(--padding-sm) 0;
+    padding: var(--padding-sm);
+}
+
+.content {
+    flex: 4;
+}
+
+.notebook,
+.gamelog,
+.gamePanel,
+.inventory {
+    gap: var(--gap-sm);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.notebook li,
+.gamelog li {
+    font-size: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.notebook button {
+    background: transparent;
+    color: var(--color-03);
+    border: 5px solid var(--color-03);
+}
+
+.notebook button:hover {
+    background: var(--color-05);
+    color: var(--color-01);
+    border: 5px solid var(--color-05);
+}
+
+.gamePanel {
+    gap: none;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-sm);
+    width: 100%;
+    align-items: stretch;
+}
+
+.panel .panel-options {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-sm);
+    width: 100%;
+}
+
+.panel .option {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option {
+    flex: 1;
+    border-radius: 20px;
+    background-color: rgba(25, 25, 25, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--color-04);
+    padding: var(--padding-sm);
+}
+
+.option:hover {
+    cursor: pointer;
+    color: var(--color-05);
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: var(--gap-sm);
+    grid-row-gap: var(--gap-sm);
+    padding: var(--gap-sm);
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item img {
+    width: auto;
+    max-height: 200px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.item .item-name {
+    margin-top: 4px;
+    font-size: 0.8em;
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
 }

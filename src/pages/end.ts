@@ -1,20 +1,12 @@
-import { HomeLayout } from "../layouts/HomeLayout";
-import { Hero } from "../sections/HeroSection";
-import { Rules } from "../sections/RulesSection";
+import { EndLayout } from "../layouts/EndLayout";
+import { EndSection } from "../sections/EndSection";
 
-export function renderEnd(): HTMLElement | undefined {
-    const app = document.getElementById("app");
-    if (!app) return;
-
-    app.innerHTML = "";
-
-    const layout = HomeLayout();
-
+export function renderEnd(): HTMLElement {
+    const layout = EndLayout();
     const container = layout.querySelector(".container");
-    if (!container) return;
+    if (!container) throw new Error("Container no encontrado");
 
-    container.appendChild(Hero());
-    container.appendChild(Rules());
+    container.appendChild(EndSection());
 
-    app.appendChild(layout);
+    return layout;
 }

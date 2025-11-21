@@ -6,7 +6,7 @@ export function Footer() {
         <small>Hecho por:</small>
         <h3 aria-label="autor">SAMUEL RIVERA</h3>
         <a
-            href="#"
+            href="https://github.com/dnbsammie/detective"
             target="_blank"
             rel="noonpener noreferrer"
             aria-label="Github Repository Link"

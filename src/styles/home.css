@@ -28,19 +28,9 @@
     width: 45%;
 }
 
-.player img {
-    aspect-ratio: 32/9;
-    border-radius: 9999px;
+.hero-r img {
+    border-radius: 20px;
     filter: grayscale(100%);
-}
-
-#text_accent {
-    text-transform: uppercase;
-    font-family: 'Bebas Neue';
-    font-weight: 700;
-    line-height: 0.85;
-    font-size: clamp(1.25rem, 2vw, 3rem);
-    letter-spacing: var(--space-xxs);
 }
 
 /* === Rules === */
@@ -91,6 +81,29 @@
 }
 
 #rules button:hover {
+    background: var(--color-05);
+    color: var(--color-01);
+    border: 5px solid var(--color-05);
+}
+
+/* History*/
+#history {
+    background-color: var(--color-04);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--padding-sm);
+    text-align: left;
+    z-index: 0;
+}
+
+#history button {
+    background: transparent;
+    color: var(--color-01);
+    border: 5px solid var(--color-01);
+}
+
+#history button:hover {
     background: var(--color-05);
     color: var(--color-01);
     border: 5px solid var(--color-05);
